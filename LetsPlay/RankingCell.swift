@@ -20,9 +20,9 @@ class RankingCell: UICollectionViewCell {
     
     var post: PostCell? {
         didSet {
-            personNameLabel.text = "New Person"
-            pointsLabel.text = "New Points"
-            rankingImage.image = UIImage(named: "")
+            personNameLabel.text = post?.mainLabel
+            pointsLabel.text = post?.secondaryLabel
+            rankingImage.image = post?.imageCell
         }
     }
     

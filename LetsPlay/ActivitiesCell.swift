@@ -20,9 +20,9 @@ class ActivitiesCell: UICollectionViewCell {
     
     var post: PostCell? {
         didSet {
-            personNameLabel.text = "New Person"
-            activityLabel.text = "New Activity"
-            eventLabel.text = "New Event"
+            personNameLabel.text = post?.mainLabel
+            activityLabel.text = post?.secondaryLabel
+            eventLabel.text = post?.thirdLabel
         }
     }
     

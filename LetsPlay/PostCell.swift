@@ -9,15 +9,27 @@
 import UIKit
 
 class PostCell: NSObject {
-    init(dataInit: [String:Any?]) {
+    
+    var mainLabel: String?
+    var secondaryLabel:String?
+    var thirdLabel:String?
+    var imageCell:UIImage?
+    var activityName:String?
+    var pointsRanking:String?
+    
+    var cellHeight:CGRect?
+
+    
+    init(dataInit:[String:Any?]) {
         super.init()
         
-        var eventName:String = dataInit[""] as! String
-        var personName:String = dataInit[""] as! String
-        var imageLevelEvent:UIImage = UIImage(named: dataInit[""] as! String)!
+        mainLabel = dataInit[""] as? String
+        secondaryLabel = dataInit[""] as? String
+        thirdLabel = dataInit[""] as? String
+        imageCell = UIImage(named: dataInit[""] as! String)
         
-        var activityName:String = dataInit[""] as! String
-        var pointsRanking:String = dataInit[""] as! String
+        activityName = dataInit[""] as? String
+        pointsRanking = dataInit[""] as? String
         
         
     }

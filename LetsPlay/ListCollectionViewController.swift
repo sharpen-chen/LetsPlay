@@ -14,13 +14,17 @@ var cellClass:AnyClass? = nil
 
 class ListCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    init(itemTitle: String, currentCellIdentifier: String, currentCellClassName: String) {
+    init(itemTitle: String, currentCellIdentifier: String, currentCellClassName: String, receivedData: [NSArray]) {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
         
         let plistFileName = Bundle.main.infoDictionary?["TargetName"] as! String
         cellIdentifier = currentCellIdentifier
         cellClassName = plistFileName + "." + currentCellClassName
         cellClass = NSClassFromString(cellClassName).self
+//        print(receivedData.description)
+//        for item in receivedData {
+//            print(item)
+//        }
         
         self.navigationItem.title = itemTitle
         collectionView?.alwaysBounceVertical = true

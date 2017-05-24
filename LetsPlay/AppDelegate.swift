@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navmenu: NavMenuController = NavMenuController()
         window?.rootViewController = navmenu
 
+
         return true
     }
 

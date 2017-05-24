@@ -20,9 +20,9 @@ class EventsCell: UICollectionViewCell {
     
     var post: PostCell? {
          didSet {
-            titleLabel.text = "New title"
-            eventCreatorLabel.text = "New Creator"
-            rankingImage.image = UIImage(named: "")
+            titleLabel.text = post?.mainLabel
+            eventCreatorLabel.text = post?.secondaryLabel
+            rankingImage.image = post?.imageCell
         }
     }
     

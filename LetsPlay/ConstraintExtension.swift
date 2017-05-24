@@ -21,4 +21,12 @@ extension UIView {
                                                       options: NSLayoutFormatOptions(),metrics: nil, views: viewsDictionnary))
 
     }
+    
 }
+
+enum cellType: String {
+    case eventsCell = "EventsCell"
+    case activitiesCell = "ActivitiesCell"
+    case rankingCell = "RankingCell"
+}
+
